@@ -2,7 +2,8 @@
 set -e
 
 # Параметры
-PROFILE="${1:-dev}"  # profile: dev или prod
+#PROFILE="${1:-dev}"  # profile: dev или prod
+PROFILE="${1:-prod}"  # profile: dev или prod
 
 # Цвета для вывода
 RED='\033[0;31m'
