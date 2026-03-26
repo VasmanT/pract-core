@@ -15,7 +15,7 @@ public class ProfileInfoController {
 
     @GetMapping("/profile")
     public String getActiveProfile() {
-        return "крутые данные, - version2603_05. Active profile: " + activeProfile;
+        return "крутые данные, - version2603_1. Active profile: " + activeProfile;
     }
 
     @GetMapping("/env")
