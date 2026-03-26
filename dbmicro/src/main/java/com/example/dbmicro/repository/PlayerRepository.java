@@ -15,7 +15,7 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
         // Формат: 03.12.2025 14:30:45
         var currentDateTime = now(ZoneId.of("Europe/Moscow"))
                 .format(ofPattern("dd.MM.yyyy HH:mm:ss z"));
-        return "крутые данные, - version3(" + currentDateTime + "). Количество игроков в базе: " + count() + ".";
+        return "крутые данные, - version22200(" + currentDateTime + "). Количество игроков в базе: " + count() + ".";
     }
 }
 
