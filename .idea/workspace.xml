@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновление плеера в dbmicro, он опять стал рекордом">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/scripts/deploy_new.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/scripts/deployt.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/scripts/stop_c.sh" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,7 @@
       <workItem from="1772710347781" duration="156000" />
       <workItem from="1772710536527" duration="367000" />
       <workItem from="1774507432399" duration="129000" />
-      <workItem from="1774507575508" duration="3174000" />
+      <workItem from="1774507575508" duration="3472000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />

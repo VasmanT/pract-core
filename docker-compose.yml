@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  practice:
+    build:
+      context: ./practice
+      dockerfile: Dockerfile
+    container_name: myapp-practice
+    ports:
+      - "8095:8095"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${PROFILE:-dev}
+      - SERVER_PORT=8095
+    volumes:
+      - practice-logs:/app/logs
+    networks:
+      - myapp-network
+    restart: unless-stopped
+
+  dbmicro:
+    build:
+      context: ./dbmicro
+      dockerfile: Dockerfile
+    container_name: myapp-dbmicro
+    ports:
+      - "8096:8096"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${PROFILE:-dev}
+      - SERVER_PORT=8096
+    volumes:
+      - dbmicro-logs:/app/logs
+    networks:
+      - myapp-network
+    restart: unless-stopped
+
+networks:
+  myapp-network:
+    driver: bridge
+
+volumes:
+  practice-logs:
+  dbmicro-logs:
