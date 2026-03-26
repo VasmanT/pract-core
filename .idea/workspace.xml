@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Увидел что гит видит только dbmicro, коммит обновления репа">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/model/Player.java" afterDir="false" />
-    </list>
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновление плеера в dbmicro, он опять стал рекордом" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +86,7 @@
       <workItem from="1772710347781" duration="156000" />
       <workItem from="1772710536527" duration="367000" />
       <workItem from="1774507432399" duration="129000" />
-      <workItem from="1774507575508" duration="1722000" />
+      <workItem from="1774507575508" duration="2192000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -107,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774505678864</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Обновление плеера в dbmicro, он опять стал рекордом">
+      <option name="closed" value="true" />
+      <created>1774509785810</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774509785811</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +145,7 @@
     <MESSAGE value="Player.java в record в practice" />
     <MESSAGE value="Merge branch 'docker-compose' - сохранили версию из master" />
     <MESSAGE value="Увидел что гит видит только dbmicro, коммит обновления репа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Увидел что гит видит только dbmicro, коммит обновления репа" />
+    <MESSAGE value="Обновление плеера в dbmicro, он опять стал рекордом" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление плеера в dbmicro, он опять стал рекордом" />
   </component>
 </project>
