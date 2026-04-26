@@ -121,7 +121,6 @@ public class ApiClientController {
 
             if (response.getStatusCode() == CREATED || response.getStatusCode().is2xxSuccessful()) {
                 log.info("Игрок успешно создан с id: {}",
-//                        response.getBody() != null ? response.getBody().getId() : "unknown");
                         response.getBody() != null ? response.getBody().id() : "unknown");
                 return status(CREATED).body(response.getBody());
             } else {

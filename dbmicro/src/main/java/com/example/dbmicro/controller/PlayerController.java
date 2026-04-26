@@ -17,18 +17,11 @@ import static org.springframework.http.ResponseEntity.ok;
 @RestController
 @RequestMapping({"/api/players", "/api/players/"})
 public class PlayerController {
-//
-//    public final PlayerServiceImpl playerService;
-//
-//    public PlayerController(@Qualifier("playerService") PlayerServiceImpl playerService) {
-//        this.playerService = playerService;
-//    }
+
     public final PlayerService playerService;
 
-//    public PlayerController(@Qualifier("PlayerServiceProdImpl") PlayerService playerService) {
-    public PlayerController( PlayerService playerService) {
+    public PlayerController(PlayerService playerService) {
         this.playerService = playerService;
-
     }
 
     @Operation(summary = "Проверка того, что приложение обновилось")
@@ -41,7 +34,6 @@ public class PlayerController {
     @GetMapping("/{id}")
     public ResponseEntity<Player> getById(@PathVariable("id") Long id) {
         return ok(playerService.getById(id));
-//        return ok(playerService.getById(id));
     }
 
     @Operation(summary = "Получить всех игроков")

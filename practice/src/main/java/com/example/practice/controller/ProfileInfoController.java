@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/info")
 public class ProfileInfoController {
 
-//    @Value("${spring.profiles.active}")
     @Value("${spring.profiles.active}")
     private String activeProfile;
 
     @GetMapping("/profile")
     public String getActiveProfile() {
-        return "крутые данные, - practice - 2604_dc2. Тест git. Active profile: " + activeProfile;
+        return "крутые данные, - final test! practice - 2604_dc2. Тест git. Active profile: " + activeProfile;
     }
 
     @GetMapping("/env")
@@ -27,18 +26,4 @@ public class ProfileInfoController {
         }
         return "Unknown environment";
     }
-//
-//    @GetMapping("/env")
-//    @Profile("dev")
-//    public String getDevInfo() {
-//        String result = playerService.getData();
-//        return "Development environment - Debug m0de enabled " + result;
-//    }
-//
-//    @PostMapping("/env")
-//    @Profile("prod")
-//    public String getProdInfo() {
-//        String result = playerService.getData();
-//        return "Production environment - Performance optimized " + result;
-//    }
 }
