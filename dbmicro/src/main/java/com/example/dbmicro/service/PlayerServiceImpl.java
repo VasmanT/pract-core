@@ -8,12 +8,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public class PlayerServiceImpl implements PlayerService {
 
     private final PlayerRepository repository;
 
-//    public PlayerServiceImpl(@Qualifier("firstRepository") PlayerRepository repository) {
     public PlayerServiceImpl(@Qualifier("playerRepository") PlayerRepository repository) {
         this.repository = repository;
     }

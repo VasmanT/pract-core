@@ -25,7 +25,8 @@ public class PlayerController {
 //    }
     public final PlayerService playerService;
 
-    public PlayerController(@Qualifier("PlayerServiceProdImpl") PlayerService playerService) {
+//    public PlayerController(@Qualifier("PlayerServiceProdImpl") PlayerService playerService) {
+    public PlayerController( PlayerService playerService) {
         this.playerService = playerService;
 
     }

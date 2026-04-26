@@ -12,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProfileInfoController {
 
 //    @Value("${spring.profiles.active}")
-    private String activeProfile = "no Profile";
+//    private String activeProfile = "no Profile";
+
+
+    @Value("${spring.profiles.active}")
+    private String activeProfile;
 
     public final PlayerService playerService;
 
-    public ProfileInfoController(@Qualifier("PlayerServiceProdImpl") PlayerService playerService) {
+//    public ProfileInfoController(@Qualifier("PlayerServiceProdImpl") PlayerService playerService) {
+    public ProfileInfoController(PlayerService playerService) {
         this.playerService = playerService;
     }
 

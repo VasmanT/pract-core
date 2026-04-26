@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновление плеера в dbmicro, он опять стал рекордом">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dbmicro/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dbmicro/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/deploy-dc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/ProfileInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/ProfileInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/repository/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/repository/PlayerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceDevImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceDevImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceProdImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceProdImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/test/java/com/example/dbmicro/DbmicroApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/test/java/com/example/dbmicro/DbmicroApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/practice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ProfileInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ProfileInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy-all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy-all.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,29 +50,54 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="3AWZa5Dz5v7NgoJHXi0IQ48PFWD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/PracticeJava/pract-core/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.DbmicroApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.dbmicro [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.dbmicro [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PracticeJava/pract-core/dbmicro/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.DbmicroApplication">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PracticeJava\pract-core\dbmicro\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DbmicroApplicationTests.contextLoads">
+    <configuration name="DbmicroApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dbmicro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dbmicro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.dbmicro" />
+      <option name="MAIN_CLASS_NAME" value="com.example.dbmicro.DbmicroApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DbmicroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="dbmicro" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dbmicro.DbmicroApplication" />
@@ -68,6 +112,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DbmicroApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -88,7 +137,11 @@
       <workItem from="1772710347781" duration="156000" />
       <workItem from="1772710536527" duration="367000" />
       <workItem from="1774507432399" duration="129000" />
-      <workItem from="1774507575508" duration="3472000" />
+      <workItem from="1774507575508" duration="9223000" />
+      <workItem from="1774534225389" duration="4415000" />
+      <workItem from="1775454654178" duration="15000" />
+      <workItem from="1776836882966" duration="5005000" />
+      <workItem from="1777191017962" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -144,6 +197,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/practice" />
+    </ignored-roots>
     <MESSAGE value="Player.java в record в practice" />
     <MESSAGE value="Merge branch 'docker-compose' - сохранили версию из master" />
     <MESSAGE value="Увидел что гит видит только dbmicro, коммит обновления репа" />

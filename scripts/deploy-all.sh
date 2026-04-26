@@ -2,7 +2,8 @@
 set -e
 
 # Параметры
-PROFILE="${1:-dev}"  # profile: dev или prod
+PROFILE="${1:-prod}"  # profile: dev или prod
+#PROFILE="${1:-dev}"  # profile: dev или prod
 
 # Цвета для вывода
 RED='\033[0;31m'
@@ -21,7 +22,7 @@ PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # Конфигурация сервисов
 declare -A SERVICES=(
-    ["practice"]="practice:practice-0.0.1-SNAPSHOT.jar:8095"
+    ["practice"]="practice:practice-1.0-SNAPSHOT.jar:8095"
     ["dbmicro"]="dbmicro:dbmicro-1.0-SNAPSHOT.jar:8096"
 )
 

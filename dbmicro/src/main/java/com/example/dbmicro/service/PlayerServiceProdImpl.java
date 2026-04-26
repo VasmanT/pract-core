@@ -4,7 +4,8 @@ import com.example.dbmicro.repository.PlayerRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service("PlayerServiceProdImpl")
+@Service
+@Profile("prod")
 public class PlayerServiceProdImpl extends PlayerServiceImpl{
 
     public PlayerServiceProdImpl(PlayerRepository repository) {
