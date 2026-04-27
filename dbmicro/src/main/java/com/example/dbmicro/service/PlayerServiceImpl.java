@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-public class PlayerServiceImpl implements PlayerService {
+public abstract class PlayerServiceImpl implements PlayerService {
 
     private final PlayerRepository repository;
 

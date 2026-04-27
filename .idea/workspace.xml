@@ -5,35 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновление плеера в dbmicro, он опять стал рекордом">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/scripts/deploy.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/scripts/deploy.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/scripts/deploy3.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/ProfileInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/controller/ProfileInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/repository/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/repository/PlayerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/dbmicro/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/dbmicro/start-app.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/practice/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/practice/start-app.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/scripts/deploy3.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ProfileInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ProfileInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-containers.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deploy-all.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deploy-compose.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deploy.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/manage.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/new_cont.sh" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +27,10 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -66,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "JUnit.DbmicroApplicationTests.contextLoads.executor": "Run",
     "Maven.dbmicro [clean].executor": "Run",
     "Maven.dbmicro [package].executor": "Run",
@@ -90,7 +68,7 @@
       <recent name="D:\PracticeJava\pract-core\dbmicro\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DbmicroApplicationTests.contextLoads">
+  <component name="RunManager" selected="Spring Boot.DbmicroApplication">
     <configuration name="DbmicroApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dbmicro" />
       <extension name="coverage">
@@ -121,8 +99,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="JUnit.DbmicroApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -150,7 +141,7 @@
       <workItem from="1774534225389" duration="4415000" />
       <workItem from="1775454654178" duration="15000" />
       <workItem from="1776836882966" duration="5005000" />
-      <workItem from="1777191017962" duration="8278000" />
+      <workItem from="1777191017962" duration="12585000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
