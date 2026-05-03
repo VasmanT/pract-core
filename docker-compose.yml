@@ -2,14 +2,12 @@ version: '3.8'
 
 services:
   practice:
-    build:
-      context: ./practice
-      dockerfile: Dockerfile
+    image: ${REGISTRY:-}practice:${TAG:-latest}
     container_name: myapp-practice
     ports:
-      - "8095:8095"  # внешний:внутренний
+      - "8095:8095"
     environment:
-      - SPRING_PROFILES_ACTIVE=${PROFILE:-dev}
+      - SPRING_PROFILES_ACTIVE=${PROFILE:-prod}
       - SERVER_PORT=8095
       - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
       - TZ=${TZ:-Europe/Moscow}
@@ -26,16 +24,19 @@ services:
       start_period: 40s
     depends_on:
       - practicedb
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   dbmicro:
-    build:
-      context: ./dbmicro
-      dockerfile: Dockerfile
+    image: ${REGISTRY:-}dbmicro:${TAG:-latest}
     container_name: myapp-dbmicro
     ports:
-      - "8096:8096"  # внешний:внутренний
+      - "8096:8096"
     environment:
-      - SPRING_PROFILES_ACTIVE=${PROFILE:-dev}
+      - SPRING_PROFILES_ACTIVE=${PROFILE:-prod}
       - SERVER_PORT=8096
       - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
       - TZ=${TZ:-Europe/Moscow}
@@ -52,12 +53,17 @@ services:
       start_period: 40s
     depends_on:
       - practicedb
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   practicedb:
     image: postgres:15-alpine
     container_name: myapp-practicedb
     ports:
-      - "5436:5432"  # внешний порт 5436 -> внутренний порт 5432
+      - "5436:5432"
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
@@ -73,6 +79,11 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 networks:
   myapp-network:
@@ -83,4 +94,90 @@ volumes:
   dbmicro-logs:
   postgres_data:
 
-# Test git
+
+#version: '3.8'
+#
+#services:
+#  practice:
+#    build:
+#      context: ./practice
+#      dockerfile: Dockerfile
+#    container_name: myapp-practice
+#    ports:
+#      - "8095:8095"  # внешний:внутренний
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=${PROFILE:-dev}
+#      - SERVER_PORT=8095
+#      - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
+#      - TZ=${TZ:-Europe/Moscow}
+#    volumes:
+#      - practice-logs:/app/logs
+#    networks:
+#      - myapp-network
+#    restart: unless-stopped
+#    healthcheck:
+#      test: ["CMD", "curl", "-f", "http://localhost:8095/actuator/health"]
+#      interval: 30s
+#      timeout: 10s
+#      retries: 3
+#      start_period: 40s
+#    depends_on:
+#      - practicedb
+#
+#  dbmicro:
+#    build:
+#      context: ./dbmicro
+#      dockerfile: Dockerfile
+#    container_name: myapp-dbmicro
+#    ports:
+#      - "8096:8096"  # внешний:внутренний
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=${PROFILE:-dev}
+#      - SERVER_PORT=8096
+#      - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
+#      - TZ=${TZ:-Europe/Moscow}
+#    volumes:
+#      - dbmicro-logs:/app/logs
+#    networks:
+#      - myapp-network
+#    restart: unless-stopped
+#    healthcheck:
+#      test: ["CMD", "curl", "-f", "http://localhost:8096/actuator/health"]
+#      interval: 30s
+#      timeout: 10s
+#      retries: 3
+#      start_period: 40s
+#    depends_on:
+#      - practicedb
+#
+#  practicedb:
+#    image: postgres:15-alpine
+#    container_name: myapp-practicedb
+#    ports:
+#      - "5436:5432"  # внешний порт 5436 -> внутренний порт 5432
+#    environment:
+#      POSTGRES_DB: postgres
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: root
+#      TZ: ${TZ:-Europe/Moscow}
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+#    networks:
+#      - myapp-network
+#    restart: unless-stopped
+#    healthcheck:
+#      test: ["CMD-SHELL", "pg_isready -U postgres"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+#
+#networks:
+#  myapp-network:
+#    driver: bridge
+#
+#volumes:
+#  practice-logs:
+#  dbmicro-logs:
+#  postgres_data:
+#
+## Test git
