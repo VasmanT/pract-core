@@ -6,3 +6,5 @@
 Maven создание image
 
  docker image prune -f
+
+ cd-deploy.sh
