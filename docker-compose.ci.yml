@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  practice-builder:
+    image: maven:3.9-eclipse-temurin-17
+    working_dir: /app
+    volumes:
+      - ./practice:/app
+      - maven-cache:/root/.m2
+    command: mvn clean package -DskipTests
+
+  dbmicro-builder:
+    image: maven:3.9-eclipse-temurin-17
+    working_dir: /app
+    volumes:
+      - ./dbmicro:/app
+      - maven-cache:/root/.m2
+    command: mvn clean package -DskipTests
+
+volumes:
+  maven-cache:
