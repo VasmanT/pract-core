@@ -23,11 +23,12 @@ build_jars() {
     print_info "Сборка JAR файлов..."
 
     # Через Maven
-    cd practice
+#    cd practice
+    cd /d/PracticeJava/pract-core/practice
     mvn clean package -DskipTests
     cd ..
 
-    cd dbmicro
+    cd /d/PracticeJava/pract-core/dbmicro
     mvn clean package -DskipTests
     cd ..
 
