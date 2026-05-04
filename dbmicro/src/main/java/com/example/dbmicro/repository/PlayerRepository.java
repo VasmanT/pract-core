@@ -14,6 +14,6 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     default String getData() {
         var currentDateTime = now(ZoneId.of("Europe/Moscow"))
                 .format(ofPattern("dd.MM.yyyy HH:mm:ss z"));
-        return "крутые данные, - final test dbmicro 2604_dc2(" + currentDateTime + "). Тест git. Количество игроков в базе: " + count() + ".";
+        return " dbmicro . V2 (" + currentDateTime + "). Количество игроков в базе: " + count() + ".";
     }
 }

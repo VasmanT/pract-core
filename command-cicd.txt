@@ -1,3 +1,25 @@
+# Перейдите в папку со скриптами
+cd d:/PracticeJava/pract-core/scripts
+
+# Дайте права на выполнение (для Git Bash)
+chmod +x *.sh
+
+# Только сборка
+TAG=v1.0.0 ./ci-build.sh
+
+# Только деплой
+./cd-deploy.sh dev latest deploy
+
+# Полный CI/CD
+./cicd.sh full dev v1.0.0
+
+# Статус
+./cicd.sh status dev
+
+# Помощь
+./cicd.sh help
+
+-------------------------------
 Команды для использования
 
 🔹 Локальная разработка (быстрый старт)
