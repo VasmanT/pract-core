@@ -14,7 +14,7 @@ public class ProfileInfoController {
 
     @GetMapping("/profile")
     public String getActiveProfile() {
-        return "practice V2. Active profile: " + activeProfile;
+        return "practice V1-дубльтест. Active profile: " + activeProfile;
     }
 
     @GetMapping("/env")
