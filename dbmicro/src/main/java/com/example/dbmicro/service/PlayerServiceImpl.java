@@ -13,7 +13,7 @@ public abstract class PlayerServiceImpl implements PlayerService {
 
     private final PlayerRepository repository;
 
-    public PlayerServiceImpl(@Qualifier("playerRepository") PlayerRepository repository) {
+    public PlayerServiceImpl(PlayerRepository repository) {
         this.repository = repository;
     }
 
