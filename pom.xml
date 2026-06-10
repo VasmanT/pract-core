@@ -25,6 +25,7 @@
     <modules>
         <module>practice</module>
         <module>dbmicro</module>
+        <module>kafkamicro</module>
     </modules>
 
     <!-- Общие свойства -->

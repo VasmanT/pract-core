@@ -25,4 +25,9 @@ docker image prune -f
 
 
  kafka-micro принимает запрос(get) от practice,
- km при запросе от p идёт в кафку получает что есть в топике и возвращает
+ kafka-micro при запросе от practice идёт в кафку получает что есть в топике и возвращает
+
+
+
+https://www.youtube.com/watch?v=hbseyn-CfXY&t=1332s
+https://javarush.com/quests/lectures/ru.javarush.java.spring.lecture.level19.lecture09

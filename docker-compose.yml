@@ -11,19 +11,16 @@ services:
       - SERVER_PORT=8095
       - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
       - TZ=${TZ:-Europe/Moscow}
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     volumes:
       - practice-logs:/app/logs
     networks:
       - myapp-network
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8095/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
     depends_on:
       - practicedb
+      - kafka
 
   dbmicro:
     image: ${REGISTRY:-}dbmicro:${TAG:-latest}
@@ -35,19 +32,16 @@ services:
       - SERVER_PORT=8096
       - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
       - TZ=${TZ:-Europe/Moscow}
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     volumes:
       - dbmicro-logs:/app/logs
     networks:
       - myapp-network
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8096/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
     depends_on:
       - practicedb
+      - kafka
 
   practicedb:
     image: postgres:15-alpine
@@ -64,11 +58,88 @@ services:
     networks:
       - myapp-network
     restart: unless-stopped
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: myapp-zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - myapp-network
+    restart: unless-stopped
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: myapp-kafka
+    ports:
+      - "9092:9092"   # internal listener (для контейнеров)
+      - "9093:9093"   # external listener (для подключения с хоста)
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+      # НАСТРОЙКА ДВУХ LISTENER'ОВ:
+      # - INTERNAL: для контейнеров внутри сети Docker (kafka:9092)
+      # - EXTERNAL: для подключения с хоста (localhost:9093)
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_CREATE_TOPICS_ENABLE: "true"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - myapp-network
+    restart: unless-stopped
+    depends_on:
+      - zookeeper
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
+      test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list" ]
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 40s
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: myapp-kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+      - KAFKA_CLUSTERS_0_READONLY=false
+    networks:
+      - myapp-network
+    restart: unless-stopped
+    depends_on:
+      - kafka
+
+  kafka-micro:
+    image: ${REGISTRY:-}kafka-micro:${TAG:-latest}
+    container_name: myapp-kafka-micro
+    ports:
+      - "8097:8097"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${PROFILE:-prod}
+      - SERVER_PORT=8097
+      - JAVA_OPTS=${JAVA_OPTS:--Xmx512m -Xms256m}
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - TZ=${TZ:-Europe/Moscow}
+    networks:
+      - myapp-network
+    restart: unless-stopped
+    depends_on:
+      - kafka
 
 networks:
   myapp-network:
@@ -78,3 +149,4 @@ volumes:
   practice-logs:
   dbmicro-logs:
   postgres_data:
+  kafka_data:
