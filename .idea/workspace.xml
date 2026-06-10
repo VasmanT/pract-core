@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Коммит перед началом внедрения kafka">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/command-kafka.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/controller/KafkaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaProducerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test-kafka.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один.">
+      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +173,7 @@
       <workItem from="1775454654178" duration="15000" />
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
-      <workItem from="1779770116996" duration="31371000" />
+      <workItem from="1779770116996" duration="32452000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -255,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779770701766</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавил кафкамикро и прочее. Коммит перерд редактированием и разбором.">
+      <option name="closed" value="true" />
+      <created>1781068752546</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1781068752546</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один.">
+      <option name="closed" value="true" />
+      <created>1781068861171</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1781068861171</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +298,9 @@
     <MESSAGE value="Коммит перед началом внедрения kafka" />
     <MESSAGE value="Задание Юры" />
     <MESSAGE value="Задание Юры" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание Юры" />
+    <MESSAGE value="Добавил кафкамикро и прочее. Коммит перерд редактированием и разбором." />
+    <MESSAGE value="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один." />
+    <option name="LAST_COMMIT_MESSAGE" value="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
