@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один.">
-      <change beforePath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbmicro/src/main/java/com/example/dbmicro/service/PlayerServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Добавил класс Кафка Продюссер в сервис Практис. Добавил зависимость кафка в общий Пом файл, убрал дублирующую зависимость из пом модуля Кафкамикро" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +171,7 @@
       <workItem from="1775454654178" duration="15000" />
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
-      <workItem from="1779770116996" duration="32452000" />
+      <workItem from="1779770116996" duration="33474000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -255,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781068861171</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Добавил класс Кафка Продюссер в сервис Практис. Добавил зависимость кафка в общий Пом файл, убрал дублирующую зависимость из пом модуля Кафкамикро">
+      <option name="closed" value="true" />
+      <created>1781069859747</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1781069859747</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +306,8 @@
     <MESSAGE value="Задание Юры" />
     <MESSAGE value="Добавил кафкамикро и прочее. Коммит перерд редактированием и разбором." />
     <MESSAGE value="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один." />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрал @Qualifier(&quot;playerRepository&quot;), так как репозиторий сейчас один." />
+    <MESSAGE value="Добавил класс Кафка Продюссер в сервис Практис. Добавил зависимость кафка в общий Пом файл, убрал дублирующую зависимость из пом модуля Кафкамикро" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил класс Кафка Продюссер в сервис Практис. Добавил зависимость кафка в общий Пом файл, убрал дублирующую зависимость из пом модуля Кафкамикро" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
