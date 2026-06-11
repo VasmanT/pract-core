@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Начинаю правки practice с dc" />
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Создан dto класс PlayerCommand">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +174,7 @@
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
       <workItem from="1779770116996" duration="33474000" />
-      <workItem from="1781069922868" duration="2058000" />
+      <workItem from="1781069922868" duration="2786000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -286,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781158519462</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Добавил зависимости в pom practice">
+      <option name="closed" value="true" />
+      <created>1781158661513</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1781158661513</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Создан dto класс PlayerCommand">
+      <option name="closed" value="true" />
+      <created>1781158950762</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1781158950762</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +353,9 @@
     <MESSAGE value="Убрал из общего pom зависимость kafka, так как ее не видят микросервисы. Добавил ее в каждый из сервисов." />
     <MESSAGE value="Непонятные изменения" />
     <MESSAGE value="Начинаю правки practice с dc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начинаю правки practice с dc" />
+    <MESSAGE value="Добавил зависимости в pom practice" />
+    <MESSAGE value="Создан dto класс PlayerCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создан dto класс PlayerCommand" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
