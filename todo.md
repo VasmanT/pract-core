@@ -8,6 +8,7 @@ Maven создание image
 
 docker image prune -f
 
+!
 
 
 05.05.
