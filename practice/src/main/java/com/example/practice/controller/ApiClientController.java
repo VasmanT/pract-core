@@ -1,8 +1,11 @@
 package com.example.practice.controller;
 
 import com.example.practice.model.Player;
+import com.example.practice.service.KafkaProducerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.*;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
@@ -28,13 +31,19 @@ public class ApiClientController {
 
     private final RestTemplate restTemplate;
     private final String externalApiUrl = "http://host.docker.internal:8096/api/players";
+    public final KafkaProducerService kafkaProducerService;
 
-    public ApiClientController(RestTemplateBuilder restTemplateBuilder) {
+    @Autowired
+    public ApiClientController(RestTemplateBuilder restTemplateBuilder, KafkaProducerService kafkaProducerService) {
         this.restTemplate = restTemplateBuilder
                 .setConnectTimeout(Duration.ofSeconds(5))
                 .setReadTimeout(Duration.ofSeconds(10))
                 .build();
+        this.kafkaProducerService = kafkaProducerService;
     }
+
+
+
 
     // GET all - получение всех игроков
     @GetMapping
@@ -105,46 +114,48 @@ public class ApiClientController {
         log.info("Вызов внешнего API для создания нового игрока: {}", externalApiUrl);
         log.debug("Данные нового игрока: {}", player);
 
-        try {
-            var headers = new HttpHeaders();
-            headers.setContentType(APPLICATION_JSON);
 
-            var request = new HttpEntity<>(player, headers);
-
-            var response = restTemplate.postForEntity(
-                    externalApiUrl,
-                    request,
-                    Player.class
-            );
-
-            log.info("Статус ответа от внешнего API при создании: {}", response.getStatusCode());
-
-            if (response.getStatusCode() == CREATED || response.getStatusCode().is2xxSuccessful()) {
-                log.info("Игрок успешно создан с id: {}",
-                        response.getBody() != null ? response.getBody().id() : "unknown");
-                return status(CREATED).body(response.getBody());
-            } else {
-                return status(response.getStatusCode())
-                        .body("Внешний сервис вернул статус: " + response.getStatusCode());
-            }
-
-        } catch (HttpClientErrorException.BadRequest e) {
-            log.error("Неверные данные при создании игрока: {}", e.getResponseBodyAsString());
-            return status(BAD_REQUEST)
-                    .body("Неверные данные: " + e.getResponseBodyAsString());
-        } catch (HttpClientErrorException.Conflict e) {
-            log.error("Конфликт при создании игрока: {}", e.getResponseBodyAsString());
-            return status(CONFLICT)
-                    .body("Игрок уже существует: " + e.getResponseBodyAsString());
-        } catch (ResourceAccessException e) {
-            log.error("Ошибка подключения при создании: {}", e.getMessage());
-            return status(SERVICE_UNAVAILABLE)
-                    .body("Не удалось подключиться к внешнему сервису");
-        } catch (Exception e) {
-            log.error("Ошибка при создании игрока: {}", e.getMessage());
-            return status(INTERNAL_SERVER_ERROR)
-                    .body("Внутренняя ошибка сервера");
-        }
+        return null;
+//        try {
+//            var headers = new HttpHeaders();
+//            headers.setContentType(APPLICATION_JSON);
+//
+//            var request = new HttpEntity<>(player, headers);
+//
+//            var response = restTemplate.postForEntity(
+//                    externalApiUrl,
+//                    request,
+//                    Player.class
+//            );
+//
+//            log.info("Статус ответа от внешнего API при создании: {}", response.getStatusCode());
+//
+//            if (response.getStatusCode() == CREATED || response.getStatusCode().is2xxSuccessful()) {
+//                log.info("Игрок успешно создан с id: {}",
+//                        response.getBody() != null ? response.getBody().id() : "unknown");
+//                return status(CREATED).body(response.getBody());
+//            } else {
+//                return status(response.getStatusCode())
+//                        .body("Внешний сервис вернул статус: " + response.getStatusCode());
+//            }
+//
+//        } catch (HttpClientErrorException.BadRequest e) {
+//            log.error("Неверные данные при создании игрока: {}", e.getResponseBodyAsString());
+//            return status(BAD_REQUEST)
+//                    .body("Неверные данные: " + e.getResponseBodyAsString());
+//        } catch (HttpClientErrorException.Conflict e) {
+//            log.error("Конфликт при создании игрока: {}", e.getResponseBodyAsString());
+//            return status(CONFLICT)
+//                    .body("Игрок уже существует: " + e.getResponseBodyAsString());
+//        } catch (ResourceAccessException e) {
+//            log.error("Ошибка подключения при создании: {}", e.getMessage());
+//            return status(SERVICE_UNAVAILABLE)
+//                    .body("Не удалось подключиться к внешнему сервису");
+//        } catch (Exception e) {
+//            log.error("Ошибка при создании игрока: {}", e.getMessage());
+//            return status(INTERNAL_SERVER_ERROR)
+//                    .body("Внутренняя ошибка сервера");
+//        }
     }
 
     // PUT - полное обновление игрока
