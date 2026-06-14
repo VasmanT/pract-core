@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Создан конфиг класс для кафки">
-      <change afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/config/KafkaProducerConfig.java" afterDir="false" />
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Создан сервисный класс KafkaCommandProducer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/service/KafkaProducerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +177,7 @@
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
       <workItem from="1779770116996" duration="33474000" />
-      <workItem from="1781069922868" duration="3205000" />
+      <workItem from="1781069922868" duration="9377000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -313,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781159679183</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Создан сервисный класс KafkaCommandProducer">
+      <option name="closed" value="true" />
+      <created>1781159971566</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1781159971566</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +375,8 @@
     <MESSAGE value="Добавил зависимости в pom practice" />
     <MESSAGE value="Создан dto класс PlayerCommand" />
     <MESSAGE value="Создан конфиг класс для кафки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создан конфиг класс для кафки" />
+    <MESSAGE value="Создан сервисный класс KafkaCommandProducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создан сервисный класс KafkaCommandProducer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
