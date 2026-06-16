@@ -124,7 +124,7 @@ services:
       - kafka
 
   kafka-micro:
-    image: ${REGISTRY:-}kafka-micro:${TAG:-latest}
+    image: ${REGISTRY:-}kafkamicro:${TAG:-latest}
     container_name: myapp-kafka-micro
     ports:
       - "8097:8097"
