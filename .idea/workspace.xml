@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ">
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Сщздана Dno PlayerCommand" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +174,7 @@
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
       <workItem from="1779770116996" duration="33474000" />
-      <workItem from="1781069922868" duration="20269000" />
+      <workItem from="1781069922868" duration="20647000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -347,7 +344,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781638746268</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Сщздана мождель Player как в practice">
+      <option name="closed" value="true" />
+      <created>1781640308253</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1781640308253</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Сщздана Dno PlayerCommand">
+      <option name="closed" value="true" />
+      <created>1781640396726</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1781640396726</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +416,9 @@
     <MESSAGE value="Обновлены методы для ApiClientController под kafka. Добавлены настройки kafka в  application.properties" />
     <MESSAGE value="Обновлены методы для ApiClientController" />
     <MESSAGE value="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ" />
-    <option name="LAST_COMMIT_MESSAGE" value="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ" />
+    <MESSAGE value="Сщздана мождель Player как в practice" />
+    <MESSAGE value="Сщздана Dno PlayerCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сщздана Dno PlayerCommand" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
