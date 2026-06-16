@@ -5,51 +5,32 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     consumer:
-      group-id: ${KAFKA_CONSUMER_GROUP:kafka-micro-group}
+      group-id: player-command-processor  # группа consumer'ов
       auto-offset-reset: earliest
-      enable-auto-commit: false  # Ручное управление коммитами
+      enable-auto-commit: false            # ручное подтверждение
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      max-poll-records: 100
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: "*"
-        session.timeout.ms: 30000
-        heartbeat.interval.ms: 10000
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-      retries: 3
-      acks: all
-    listener:
-      ack-mode: manual_immediate  # Ручное подтверждение
-      missing-topics-fatal: false
+        spring.json.trusted.packages: "com.example.kafkamicro.dto"
+        spring.json.type.mapping: "com.example.practice.dto.PlayerCommand:com.example.kafkamicro.dto.PlayerCommand"
 
 server:
   port: 8097
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,prometheus
-  endpoint:
-    health:
-      show-details: always
+# Адрес dbmicro (используется в CommandProcessorService)
+dbmicro:
+  api:
+    url: ${DBMICRO_URL:http://host.docker.internal:8096/api/players}
 
 # Настройки топиков
 kafka:
   topics:
-    input-topic: ${KAFKA_INPUT_TOPIC:myapp-topic}
-    output-topic: ${KAFKA_OUTPUT_TOPIC:myapp-response-topic}
-    dead-letter-topic: ${KAFKA_DLQ_TOPIC:myapp-dlq-topic}
-
-  # Максимальное количество сообщений для кэширования
-  cache:
-    max-size: 10000
+    player-commands: player-commands   # топик, который слушаем
 
 logging:
   level:
     com.example.kafkamicro: DEBUG
     org.springframework.kafka: INFO
+    org.apache.kafka: WARN
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
