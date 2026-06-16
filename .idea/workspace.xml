@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновлены методы для ApiClientController">
-      <change afterPath="$PROJECT_DIR$/kafkamicro/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ">
+      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ci-build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ci-build.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +177,7 @@
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
       <workItem from="1779770116996" duration="33474000" />
-      <workItem from="1781069922868" duration="18601000" />
+      <workItem from="1781069922868" duration="20269000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -343,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781439494037</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ">
+      <option name="closed" value="true" />
+      <created>1781638746268</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1781638746268</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +402,8 @@
     <MESSAGE value="Создан сервисный класс KafkaCommandProducer" />
     <MESSAGE value="Обновлены методы для ApiClientController под kafka. Добавлены настройки kafka в  application.properties" />
     <MESSAGE value="Обновлены методы для ApiClientController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновлены методы для ApiClientController" />
+    <MESSAGE value="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ" />
+    <option name="LAST_COMMIT_MESSAGE" value="В pom.xml kafkamicro Не была указанна версия, из за этот jar собирался с неправильным именем, контейнер не запускалсЯ" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
