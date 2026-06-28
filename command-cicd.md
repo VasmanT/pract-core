@@ -5,7 +5,7 @@ cd d:/PracticeJava/pract-core/scripts
 chmod +x *.sh
 
 # Только сборка
-TAG=v1.0.0 ./ci-build.sh
+TAG=v18.0.0 ./ci-build.sh
 
 # Только деплой
 ./cd-deploy.sh dev latest deploy
@@ -33,7 +33,7 @@ bash
 ./ci-build.sh
 
 # Собрать с конкретным тегом
-TAG=v1.0.0 ./ci-build.sh
+TAG=v27.1.1 ./ci-build.sh
 
 # Собрать и отправить в свой registry
 REGISTRY=myregistry.com/ ./ci-build.sh
@@ -45,13 +45,13 @@ bash
 ./cd-deploy.sh prod latest deploy
 
 # Деплой конкретной версии в staging
-./cd-deploy.sh staging v1.2.3 deploy
+./cd-deploy.sh staging v26.1.1 deploy
 
 # Деплой в dev с хэшем коммита
 ./cd-deploy.sh dev abc1234 deploy
 
 # Откат в production к предыдущей версии
-./cd-deploy.sh prod v1.2.2 rollback
+./cd-deploy.sh prod v26.1.1 rollback
 
 # Проверить статус
 ./cd-deploy.sh prod latest status
@@ -60,7 +60,7 @@ bash
 🔹 Полный CI/CD одной командой
 bash
 # Полный цикл: сборка → публикация → деплой
-./cicd.sh full prod v1.2.3
+./cicd.sh full prod v26.1.1
 
 # Только сборка
 ./cicd.sh build-only

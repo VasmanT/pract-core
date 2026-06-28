@@ -7,8 +7,17 @@ Maven создание image
 
 
 docker image prune -f
+docker system prune -a --volumes
+wsl --shutdown
+wsl --unregister docker-desktop-data
 
 !
+
+# 1. Очистка дискачерез ps, - После перезагрузки удаляем папку с данными Docker
+Remove-Item -Recurse -Force "C:\Users\Vasman\AppData\Local\Docker\wsl\data\*"
+
+bash перестал видеть docker , - перезагрузить ps
+Проверь, запущен ли докер!
 
 
 05.05.

@@ -288,3 +288,27 @@ kafka-console-consumer --topic test --bootstrap-server localhost:9092 --from-beg
 
 # 5. Мониторить группы
 kafka-consumer-groups --list --bootstrap-server localhost:9092
+
+
+
+Когда контейнер кафка не запускается, возможно нужно удалить логи
+# 1. Останови всё
+docker compose down
+
+# 2.1 Удали все volumes (включая данные Kafka)
+docker compose down -v
+
+# 2.2 Удалить volume с данными Kafka
+docker volume rm myapp_kafka_data
+
+# 3. Удали dangling volumes (на всякий случай)
+docker volume prune -f
+
+# 4. Запусти заново
+docker compose up -d
+
+# 5. Проверь логи Kafka
+docker compose logs kafka -f
+
+# 6. Проверь, что Kafka создала топики
+docker exec myapp-kafka kafka-topics --bootstrap-server localhost:9092 --list

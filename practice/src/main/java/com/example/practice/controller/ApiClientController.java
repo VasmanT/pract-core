@@ -44,7 +44,8 @@ public class ApiClientController {
         log.info("GET - прямое обращение к dbmicro: {}", externalApiUrl);
 
         try {
-            var response = restTemplate.getForEntity(externalApiUrl, Player[].class);
+//            var response = restTemplate.getForEntity(externalApiUrl, Player[].class);
+            ResponseEntity<Player[]> response = restTemplate.getForEntity(externalApiUrl, Player[].class);
             List<Player> players = response.getBody() != null
                     ? Arrays.asList(response.getBody())
                     : Collections.emptyList();
@@ -90,8 +91,8 @@ public class ApiClientController {
         log.info("POST - отправка команды CREATE в Kafka");
 
         // Отправляем команду в Kafka
-        PlayerCommand command = PlayerCommand.create(player);
-        boolean sent = kafkaProducer.sendCommand(command);
+        PlayerCommand command = PlayerCommand.create(player); // command, объект типа PlayerCommand c определёнными параметрами. Одним из них является команда create
+        boolean sent = kafkaProducer.sendCommand(command); // вызов метода sC объекта kP типа KPC с передаваемым параметром command
 
         if (!sent) {
             return status(SERVICE_UNAVAILABLE)

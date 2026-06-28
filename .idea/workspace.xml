@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновлён KafkaConsumerConfig">
-      <change afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/CommandProcessorService.java" afterDir="false" />
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновили апликешен">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command-cicd.md" beforeDir="false" afterPath="$PROJECT_DIR$/command-cicd.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command-kafka.md" beforeDir="false" afterPath="$PROJECT_DIR$/command-kafka.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/controller/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/controller/KafkaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/PlayerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/PlayerCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,36 +57,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.DbmicroApplicationTests.contextLoads.executor": "Run",
-    "Maven.dbmicro [clean].executor": "Run",
-    "Maven.dbmicro [package].executor": "Run",
-    "Maven.my-multi-module-app [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.DbmicroApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/PracticeJava/pract-core/kafkamicro",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "bigdataide_conn_settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DbmicroApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.dbmicro [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.dbmicro [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.kafkamicro [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.kafkamicro [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my-multi-module-app [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DbmicroApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PracticeJava/pract-core/kafkamicro&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;bigdataide_conn_settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PracticeJava\pract-core\kafkamicro" />
@@ -176,7 +188,14 @@
       <workItem from="1776836882966" duration="5005000" />
       <workItem from="1777191017962" duration="47719000" />
       <workItem from="1779770116996" duration="33474000" />
-      <workItem from="1781069922868" duration="21596000" />
+      <workItem from="1781069922868" duration="30626000" />
+      <workItem from="1781808245274" duration="2146000" />
+      <workItem from="1782113868934" duration="22485000" />
+      <workItem from="1782457931300" duration="3890000" />
+      <workItem from="1782469091525" duration="11294000" />
+      <workItem from="1782549328852" duration="4714000" />
+      <workItem from="1782554871302" duration="1506000" />
+      <workItem from="1782640322841" duration="1969000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -378,7 +397,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781641017930</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Создан CommandProcessorService">
+      <option name="closed" value="true" />
+      <created>1781641613983</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1781641613983</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Обновили апликешен">
+      <option name="closed" value="true" />
+      <created>1781641802214</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1781641802214</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,8 +446,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/practice" />
     </ignored-roots>
-    <MESSAGE value="Увидел что гит видит только dbmicro, коммит обновления репа" />
-    <MESSAGE value="Обновление плеера в dbmicro, он опять стал рекордом" />
     <MESSAGE value="Добавил cd-deploy.sh" />
     <MESSAGE value="Коммит перед внедрение новой версии cicd, коммит из корневой папки" />
     <MESSAGE value="Обновлены файлы для cicd" />
@@ -436,7 +469,9 @@
     <MESSAGE value="Сщздана Dno PlayerCommand" />
     <MESSAGE value="Создан RestTemplateConfig" />
     <MESSAGE value="Обновлён KafkaConsumerConfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновлён KafkaConsumerConfig" />
+    <MESSAGE value="Создан CommandProcessorService" />
+    <MESSAGE value="Обновили апликешен" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновили апликешен" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
