@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Обновили апликешен">
+    <list default="true" id="8c6de9f1-cffc-4f10-abcf-4925f4b24035" name="Changes" comment="Коммит перед тем как чинить кафка микро, и несанкционированный расход места на hdd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-cicd.md" beforeDir="false" afterPath="$PROJECT_DIR$/command-cicd.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-kafka.md" beforeDir="false" afterPath="$PROJECT_DIR$/command-kafka.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/controller/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/controller/KafkaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/PlayerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/dto/PlayerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/service/KafkaProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafkamicro/src/main/java/com/example/kafkamicro/config/KafkaConsumerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/controller/ApiClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/dto/PlayerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/com/example/practice/dto/PlayerCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +190,11 @@
       <workItem from="1782549328852" duration="4714000" />
       <workItem from="1782554871302" duration="1506000" />
       <workItem from="1782640322841" duration="1969000" />
+      <workItem from="1782658532509" duration="2777000" />
+      <workItem from="1782680084956" duration="2337000" />
+      <workItem from="1782713787096" duration="1347000" />
+      <workItem from="1782742392052" duration="1122000" />
+      <workItem from="1782759276926" duration="6178000" />
     </task>
     <task id="LOCAL-00001" summary="Увидел что гит видит только dbmicro, коммит обновления репа">
       <option name="closed" value="true" />
@@ -413,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781641802214</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Коммит перед тем как чинить кафка микро, и несанкционированный расход места на hdd">
+      <option name="closed" value="true" />
+      <created>1782658685347</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1782658685347</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +453,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/practice" />
     </ignored-roots>
-    <MESSAGE value="Добавил cd-deploy.sh" />
     <MESSAGE value="Коммит перед внедрение новой версии cicd, коммит из корневой папки" />
     <MESSAGE value="Обновлены файлы для cicd" />
     <MESSAGE value="Коммит перед началом внедрения kafka" />
@@ -471,7 +477,8 @@
     <MESSAGE value="Обновлён KafkaConsumerConfig" />
     <MESSAGE value="Создан CommandProcessorService" />
     <MESSAGE value="Обновили апликешен" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновили апликешен" />
+    <MESSAGE value="Коммит перед тем как чинить кафка микро, и несанкционированный расход места на hdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Коммит перед тем как чинить кафка микро, и несанкционированный расход места на hdd" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

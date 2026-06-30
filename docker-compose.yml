@@ -80,6 +80,7 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
 
       # НАСТРОЙКА ДВУХ LISTENER'ОВ:
       # - INTERNAL: для контейнеров внутри сети Docker (kafka:9092)

@@ -10,6 +10,7 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
+import org.springframework.kafka.listener.ContainerProperties;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -54,7 +55,10 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
 
         // Важно! Указываем, какой класс ожидаем в значении
-        props.put(JsonDeserializer.TRUSTED_PACKAGES, "com.example.kafkamicro.dto");
+        props.put(JsonDeserializer.TRUSTED_PACKAGES, "com.example.kafkamicro.dto,com.example.practice.dto");
+
+        props.put(JsonDeserializer.TYPE_MAPPINGS,
+                "com.example.practice.dto.PlayerCommand:com.example.kafkamicro.dto.PlayerCommand");
 
         return new DefaultKafkaConsumerFactory<>(props);
     }
@@ -72,6 +76,8 @@ public class KafkaConsumerConfig {
 
         // Количество потоков-слушателей (для параллельной обработки)
         factory.setConcurrency(3);
+
+        factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
 
         return factory;
     }

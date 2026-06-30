@@ -55,4 +55,15 @@ public class PlayerCommand {
                 LocalDateTime.now()
         );
     }
+
+    // Удобный конструктор для DELETE
+    public static PlayerCommand delete() {
+        return new PlayerCommand(
+                CommandType.DELETE,
+                null,
+                null,
+                UUID.randomUUID().toString(),
+                LocalDateTime.now()
+        );
+    }
 }
