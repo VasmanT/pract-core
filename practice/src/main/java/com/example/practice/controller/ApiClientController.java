@@ -167,17 +167,33 @@ public class ApiClientController {
 
     // ==================== DELETE ALL - через Kafka ====================
 
+
     @DeleteMapping
     public ResponseEntity<?> deleteAllUsersAsync() {
         log.info("DELETE - отправка команды DELETE_ALL в Kafka (пока не поддерживается)");
+        PlayerCommand command = PlayerCommand.delete(null);
+        boolean sent = kafkaProducer.sendCommand(command);
+        if (!sent) {
+            return status(SERVICE_UNAVAILABLE)
+                    .body(Map.of("status", "error", "message", "Очередь недоступна"));
+        }
+
+        return status(ACCEPTED).body(Map.of(
+                "status", "queued",
+                "message", "Задача на массовое удаление всех игроков поставлена в очередь.",
+                "requestId", command.getRequestId(),
+                "command", "DELETE"
+        ));
+
 
         // Для массового удаления лучше отдельная логика
-        return status(NOT_IMPLEMENTED).body(Map.of(
-                "status", "error",
-                "message", "Массовое удаление через очередь пока не реализовано. " +
-                        "Используйте DELETE /{id} для каждого игрока"
-        ));
+//        return status(NOT_IMPLEMENTED).body(Map.of(
+//                "status", "error",
+//                "message", "Массовое удаление через очередь пока не реализовано. " +
+//                        "Используйте DELETE /{id} для каждого игрока"
+//        ));
     }
+
 
     // ==================== PATCH - через Kafka ====================
 

@@ -40,6 +40,9 @@ public abstract class PlayerServiceImpl implements PlayerService {
     public List<Player> getAll() {
         return repository.findAll();
     }
+    public void deleteAll() {
+        repository.deleteAll();
+    }
 
     public void deleteByID(Long id) {
         if (id == null) {

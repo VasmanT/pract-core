@@ -125,4 +125,21 @@ public class CommandProcessorService {
 
         log.info("Игрок {} удален", id);
     }
+
+    /**
+     * Обработка DELETE команды
+     */
+    private void handleDeleteAll(PlayerCommand command) {
+        Long id = command.getPlayerId();
+        log.info("Удаление игрока с id={}", id);
+
+        // DELETE запрос к dbmicro
+        String url = dbmicroUrl;
+        log.debug("DELETE {}", url);
+
+        restTemplate.delete(url);
+
+        log.info("Игрок {} удален", id);
+    }
+
 }

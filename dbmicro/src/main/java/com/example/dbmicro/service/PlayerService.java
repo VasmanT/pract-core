@@ -13,5 +13,7 @@ public interface PlayerService {
     Player updateById(Player entity);
     Player getById(Long id);
 
+    void deleteAll();
+
 
 }
