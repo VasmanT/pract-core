@@ -65,11 +65,9 @@ public class PlayerController {
     }
 
     @Operation(summary = "Удалить всех игроков")
-    @DeleteMapping("/{id}")
+    @DeleteMapping
     public ResponseEntity<Void> deleteAll() {
         playerService.deleteAll();
         return noContent().build();
     }
-
-
 }

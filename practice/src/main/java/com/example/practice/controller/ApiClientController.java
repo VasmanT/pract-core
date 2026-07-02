@@ -184,16 +184,7 @@ public class ApiClientController {
                 "requestId", command.getRequestId(),
                 "command", "DELETE"
         ));
-
-
-        // Для массового удаления лучше отдельная логика
-//        return status(NOT_IMPLEMENTED).body(Map.of(
-//                "status", "error",
-//                "message", "Массовое удаление через очередь пока не реализовано. " +
-//                        "Используйте DELETE /{id} для каждого игрока"
-//        ));
     }
-
 
     // ==================== PATCH - через Kafka ====================
 

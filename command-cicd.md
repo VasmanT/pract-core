@@ -117,3 +117,21 @@ docker login myregistry.com
 Healthcheck требует наличия actuator в Spring Boot приложениях
 
 Порт БД: внешний 5436, внутренний 5432
+
+--------------------------------------------------------------------------------
+cd d:/PracticeJava/pract-core/dbmicro
+$ mvn clean package -DskipTests
+$ docker build -t myapp-dbmicro:v30.1.3 .
+$ docker run -d -p 8096:8096 -e "SPRING_PROFILES_ACTIVE=prod" myapp-dbmicro:v30.1.3
+
+---
+cd d:/PracticeJava/pract-core/practice
+$ mvn clean package -DskipTests
+$ docker build -t myapp-practice:v30.1.3 .
+$ docker run -d -p 8095:8095 -e "SPRING_PROFILES_ACTIVE=prod" myapp-practice:v30.1.3
+
+---
+cd d:/PracticeJava/pract-core/kafkamicro
+$ mvn clean package -DskipTests
+$ docker build -t myapp-kafka-micro:v30.1.3 .
+$ docker run -d -p 8097:8097 -e "SPRING_PROFILES_ACTIVE=prod" myapp-kafka-micro:v30.1.3

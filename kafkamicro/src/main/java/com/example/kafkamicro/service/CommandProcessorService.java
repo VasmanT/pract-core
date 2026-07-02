@@ -26,7 +26,7 @@ public class CommandProcessorService {
     /**
      * Этот метод вызывается автоматически при появлении сообщения в топике
      *
-     * @param command команда из Kafka (автоматически десериализуется из JSON)
+     * @param command        команда из Kafka (автоматически десериализуется из JSON)
      * @param acknowledgment объект для подтверждения обработки
      */
     @KafkaListener(
@@ -113,33 +113,27 @@ public class CommandProcessorService {
     /**
      * Обработка DELETE команды
      */
+
+
     private void handleDelete(PlayerCommand command) {
-        Long id = command.getPlayerId();
-        log.info("Удаление игрока с id={}", id);
-
-        // DELETE запрос к dbmicro
-        String url = dbmicroUrl + "/" + id;
-        log.debug("DELETE {}", url);
-
-        restTemplate.delete(url);
-
-        log.info("Игрок {} удален", id);
-    }
-
-    /**
-     * Обработка DELETE команды
-     */
-    private void handleDeleteAll(PlayerCommand command) {
-        Long id = command.getPlayerId();
-        log.info("Удаление игрока с id={}", id);
-
-        // DELETE запрос к dbmicro
         String url = dbmicroUrl;
-        log.debug("DELETE {}", url);
+        Long id = command.getPlayerId();
 
+        if (id != null) {
+            log.info("Удаление игрока с id={}", id);
+            url = dbmicroUrl + "/" + id;
+        } else {
+            log.info("Удаление всех игроков");
+        }
+
+        log.debug("DELETE {}", url);
         restTemplate.delete(url);
 
-        log.info("Игрок {} удален", id);
+        if (id != null) {
+            log.info("Игрок {} удален", id);
+        } else {
+            log.info("Все игроки удалены");
+        }
     }
 
 }
